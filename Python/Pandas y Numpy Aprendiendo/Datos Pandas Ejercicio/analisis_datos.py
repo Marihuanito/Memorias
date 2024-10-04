@@ -89,9 +89,26 @@ class AnalisisDatos:
         resultado = self.datos.query(filtro_columna)
         return(resultado)
 
-    def generar_graficos(self, columna, tipo='histograma'):
+    def generar_graficos(self):
         # Generar gráficos simples
-        print()
+        self.datos.plot.scatter(x='Edad',y='Salario') #Gráfico de dispersión
+        plt.title('Relación entre Edad y Salario')
+        plt.xlabel('Edad')
+        plt.ylabel('Salario')
+        plt.show()
+
+        serie = self.datos.Departamento.value_counts() #Gráfico circular
+        serie.plot.pie(autopct= '%1.1f%%',title='Distribución por Departamento')
+
+        plt.show()
+
+        # Gráfico de barras ordenado por Edad
+        # Primero, ordenamos el DataFrame por 'Edad' para luego graficarlo
+        df_ordenado = self.datos.sort_values(by='Edad')
+        df_ordenado.plot.bar(x='Edad', y='Salario', title='Salario por Edad (ordenado)')
+        plt.xlabel('Edad')
+        plt.ylabel('Salario')
+        plt.show()
 
 def main():
      
@@ -127,6 +144,7 @@ def main():
 
         elif seleccion == '4':
             # Generar gráficos
+            Datos_padre.generar_graficos()
             print("4")
         elif seleccion == '5':
             print("Saliendo...")

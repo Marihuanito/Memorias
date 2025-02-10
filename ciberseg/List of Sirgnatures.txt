@@ -1,0 +1,3 @@
+https://en.wikipedia.org/wiki/List_of_file_signatures
+
+Es una lista que nos dice según los números en los que empieza un archivo, de que tipo es este.

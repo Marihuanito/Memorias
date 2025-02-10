@@ -1,0 +1,31 @@
+TMUX es una forma de centralizar todas las terminales para tenerlo todo mas organizado, adenas 
+nos ayuda a agilizar el manejo entre terminales.
+
+Para saber si existe -> apt search tmux -> Si te sale tmux terminal multiplexer es que lo tienes instalado.
+en caso de no tenerlo instalado -> apt install tmux
+Para iniciarlo -> tmux 
+Para iniciarlo con un nombre de sension -> tmux new -s NombreSesion
+S4vitar tiene el oh my tmux, es lo mismo pero con una interfaz mas amigable. para descargarlo va al navegador y busca oh my tmux github.
+
+Comandos propios de tmux
+
+ctrl + b, soltamos y pulsamos la coma. -> Renombrar la ventana actual.
+ctrl + b, soltamos y pulsamos la c. -> Creamos otra nueva ventana.
+ctrl + b, soltamos y pulsamos un número -> Vamos a dicha ventana. La primera ventana es el 0.
+ctrl + m, -> Sirve para poder usar el raton. Con el raton podemos mover el tamaño de los paneles para que visualmente sea mas comodo. O ctrl + b y manteniendo ctrl damos a las flechas.
+ctrl + b, soltamos y shift + 2 -> nos divide la pantalla en dos consolas (paneles) de forma horizontal. para alternar entre ellas usamos:
+	ctrl + b, soltamos y pulsamos o. -> alternamos entre las dos consolas.
+	ctrl + b, soltamos y pulsamos flecha arriba o abajo. -> nos movemos a la terminal de arria o abajo.
+
+En este punto debemos diferenciar entre sesion, ventana y paneles.
+
+ctrl + b, soltamos y x. -> Nos cierra el panel seleccionado.
+ctrl + b, soltamos y shift+4. -> Renombrar la sesion.
+ctrl + b, soltamos y shit+5. -> Nos divide la ventana en dos consolas (paneles) de forma vertical.
+
+También viene bien para dejar procesos en segundo plano.
+
+ctrl + b, soltamos y d. -> Nos cierra la sesion pero nos la deja en cache para poderla retomar si queremos.
+tmux list sessions -> Nos lista las sesiones que podemos retomar.
+tmux attach -t NombreSesion -> nos abre la sesion que indiquemos. Si solo hay una nos vale con hacer tmux attach.
+ctrl + b, soltamos y w -> Estando en una sesion, con este comando podemos visualizar rápidamente otras sesiones, sin salirnos de esta o también nos podemos ir a otra sesion.

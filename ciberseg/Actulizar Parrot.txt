@@ -1,0 +1,1 @@
+Para actulizar en Parrot no se usa upgrade. Se utiliza parrot.upgrade. Si no se te va a la puta.
